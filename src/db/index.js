@@ -9,16 +9,7 @@ import question from "../assets/tell_me_about.webp";
 
 export const Samples = {
     result: [
-      {
-        image: philosophy,
-        title: "Get philosophical",
-        short_brief:
-          "I love diving into philosophical topics. Shall we start with something big, like the meaning of life? 😜",
-        description: [
-        
-         
-        ],
-      },
+    
       {
         image: foods,
         title: "Foods for better gut health",
@@ -30,6 +21,16 @@ export const Samples = {
           "Kimchi: A spicy Korean fermented vegetable dish that contains probiotics and prebiotics, which are important for gut health.",
           "Jerusalem artichokes: A type of tuber that is high in prebiotics, which act as food for beneficial gut bacteria.",
           "Broccoli: A cruciferous vegetable that is high in fiber and contains compounds that may help reduce inflammation in the gut.",
+        ],
+      },
+      {
+        image: philosophy,
+        title: "Get philosophical",
+        short_brief:
+          "I love diving into philosophical topics. Shall we start with something big, like the meaning of life? 😜",
+        description: [
+        
+         
         ],
       },
       {

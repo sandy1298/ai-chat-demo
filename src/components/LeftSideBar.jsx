@@ -106,7 +106,14 @@ function LeftSideBar() {
           {Object.entries(samples || {}).map(([_, data]) => {
             if (!Array.isArray(data)) return null; 
             return data.map((content, index) => {
-              return <div key={index}>{getCard(index, content)}</div>;
+              return <div key={index}>
+              <motion.div variants={slideIn("left", "tween", 0.2, 1)}
+               initial="hidden"
+                animate="show"
+              >
+              {getCard(index, content)}
+              </motion.div>
+              </div>;
             });
           })}
         </div>

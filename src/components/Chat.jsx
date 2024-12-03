@@ -6,13 +6,15 @@ import {
   Icon,
   LayoutBox,
   NavButton,
-  StyledBox,
+  RightStyledBox,
   StyledImage,
   StyledPadding,
   StyledPara,
   TalkContainer,
 } from "../customStyles";
 import Footer from './Footer';
+import { motion } from 'framer-motion';
+import { fadeUpSlowly, slideRightToLeft } from '../utils/motion';
 
 
 function Chat() {
@@ -33,7 +35,11 @@ function Chat() {
     </NavButton>
     {!speech ? (
       <StyledPadding>
-        <StyledBox>
+          <motion.div  variants={slideRightToLeft(0.2, 1)}
+               initial="hidden"
+                animate="show"
+              > 
+        <RightStyledBox>
           <LayoutBox
             justifyContent="space-between"
             alignItems="center"
@@ -48,20 +54,31 @@ function Chat() {
               className="style-main-image"
             />
           </LayoutBox>
-        </StyledBox>
-        
+        </RightStyledBox>
+        </motion.div>
+        <motion.div variants={fadeUpSlowly(0.3, 1)}
+               initial="hidden"
+                animate="show"
+              > 
         <Alignment padding="0px 16px">
           <StyledPara>{selectedSample?.short_brief}</StyledPara>
         </Alignment>
+        </motion.div>
         <Alignment padding="0px 16px 100px">
           {selectedSample?.description.length > 0 &&
           <ul>
             {selectedSample?.description?.map((data, index) => {
               return (
                 <>
+                  <motion.div variants={fadeUpSlowly(0.3, 1)}
+               initial="hidden"
+                animate="show"
+              > 
                   <li>
-                    <StyledPara>{data}</StyledPara>
+                <StyledPara>{data}</StyledPara>
+              
                   </li>
+                  </motion.div>
                 </>
               );
             })}

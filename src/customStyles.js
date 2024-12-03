@@ -318,6 +318,12 @@ export const StyledPadding = styled.div`
   }
 `;
 
+export const RightStyledBox = styled.div`
+  padding: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 24px;
+`;
+
 export const StyledBox = styled.div`
   padding: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

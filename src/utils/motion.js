@@ -56,4 +56,42 @@ export const fadeIn = (direction, type, delay, duration) => {
     };
   };
 
+  // Fade Up Slowly
+export const fadeUpSlowly = (delay = 0.2, duration = 1) => {
+  return {
+    hidden: {
+      opacity: 0,
+      y: 50, // Start 50px below
+    },
+    show: {
+      opacity: 1,
+      y: 0, // End at default position
+      transition: {
+        delay: delay,
+        duration: duration,
+        ease: "easeOut",
+      },
+    },
+  };
+};
+
+// Slide From Right to Left
+export const slideRightToLeft = (delay = 0.2, duration = 1) => {
+  return {
+    hidden: {
+      x: "100%", // Start off-screen to the right
+      opacity: 0,
+    },
+    show: {
+      x: 0, // Slide into the default position
+      opacity: 1,
+      transition: {
+        delay: delay,
+        duration: duration,
+        ease: "easeOut",
+      },
+    },
+  };
+};
+
   
