@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const ParentContainer = styled.div`
   border-right: 1px solid rgb(237 225 209);
   @media only screen and (max-width: 900px) {
-    background: #c3b9ab;
+    background: #f7efe3;
     height: 100vh;
     border: none;
+    overflow-y: scroll;
+   
   }
 `;
 
@@ -19,6 +21,7 @@ export const DiscoverContainer = styled.div`
   position: relative;
   top: 0px;
   height: 100vh;
+  
   @media only screen and (max-width: 762px) {
     border-radius: 24px;
     top: 16px;
@@ -41,6 +44,7 @@ export const LayoutBox = styled.div(
     alignItems,
     gap,
     flexDirection: flexDirection ?? "row",
+   
   })
 );
 
@@ -73,6 +77,7 @@ export const StyledTitle = styled.h4`
   font-size: 2.125rem;
   line-height: 2.125rem;
   letter-spacing: -0.68px;
+  margin-top: -10px;
   font-weight: 350;
   font-family: var(--font-alpina-condensed), var(--font-alpina), ui-serif,
     Georgia, Cambria, "Times New Roman", Times, serif;
@@ -106,12 +111,18 @@ export const StyledImage = styled.img`
   &.style-flexitem-image {
     height: 134px;
     width: 134px;
+    
   }
 
   &.style-main-image {
     height: 181px;
     width: 271px;
+      @media (max-width: 768px) {
+      height: 120px;
+      width: 150px; 
+    }
   }
+ 
 `;
 
 export const StyledType2Image = styled.div`
@@ -131,14 +142,17 @@ export const Title = styled.h4`
 `;
 
 export const CardTitle = styled.h4`
-  font-size: 1.1875rem;
+ 
   letter-spacing: -0.19px;
   letter-spacing: -0.68px;
   font-weight: 900;
   font-family: math;
-
+   font-size : 20px;
   &.white-title {
     color: white;
+  }
+     @media only screen and (max-width: 768px) {
+    font-size: 1.1875rem;
   }
 `;
 
@@ -302,13 +316,9 @@ export const ScrollContainer = styled.div`
   @media only screen and (min-width: 762px) and (max-width: 1000px) {
     &.left {
       overflow-y: scroll;
-      flex-grow: 2;
     }
 
-    &.right {
-      overflow-y: scroll;
-      display: none;
-    }
+   
   }
 `;
 
@@ -320,8 +330,26 @@ export const StyledPadding = styled.div`
 
 export const RightStyledBox = styled.div`
   padding: 12px;
+ box-sizing: border-box;
+  border-radius: 24px;
+  border: 2px solid #e5e7eb;
+ 
+`;
+
+export const MenuBox = styled.div`
+  padding: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 24px;
+  width :340px;
+   @media only screen and (max-width: 768px) {
+    width :335px;
+  }
+    &:hover {
+    scale: 0.9;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+    opacity: 0.9;
+  }
 `;
 
 export const StyledBox = styled.div`

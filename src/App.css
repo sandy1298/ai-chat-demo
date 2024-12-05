@@ -25,7 +25,11 @@ min-width: 500px;
 max-height: 500px;
 min-height: 400px;
 }
-
+.text_aling{
+  color: rgb(3 130 71 );
+  font-size: 18px;
+  font-weight: 500;
+}
 .style-small-image { 
   max-width: 12rem;
   max-height: 22rem;
@@ -43,8 +47,9 @@ min-height: 400px;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   height: 80px;
-  width: 344px;
+  width: 366px;
   padding: 0px 16px;
+  justify-content: center;
 
   @media only screen and (min-width: 762px) and (max-width: 1000px) { 
    width: 100%;
@@ -122,5 +127,30 @@ min-height: 400px;
     }
   }
 }
+
+.sidebar {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar.visible {
+  transform: translateX(0);
+}
+
+@media (max-width: 762px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10;
+  }
+}
+
 
  
